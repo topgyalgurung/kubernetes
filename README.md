@@ -25,3 +25,36 @@ service/helloworld exposed
 $ minikube service helloworld
 
 ```
+#### Making it Production Ready
+- add, change and delete labels
+```
+  $ kubectl get pods 
+  $ kubectl get pods --show-labels
+
+# change or overwrite 
+$ kubectl label pod/helloworld app=helloworldapp --overwrite
+pod/helloworld labeled
+
+# delete label
+$ kubectl label pod/helloworld app-
+
+## selectors
+# WORKING WITH Labels 
+$ kubectl get pods --selector env=production
+$ kubectl get pods --selector env=production --show-labels
+
+# Search by multiple labels 
+$ kubectl get pods --selector dev-lead=karthik,env=production
+$ kubectl get pods --selector dev-lead!=karthik,env=production
+$ kubectl get pods --selector dev-lead=karthik,env=production --show-labels
+
+$ kubectl get pods -l 'release-version in (1.0,2.0)'
+$ kubectl get pods -l 'release-version notin (1.0,2.0)'
+
+$ kubectl delete pods -l dev-lead=karthik
+pod "homepage-dev" deleted
+pod "homepage-prod" deleted
+pod "homepage-staging" deleted
+
+
+```
