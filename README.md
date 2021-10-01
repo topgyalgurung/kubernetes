@@ -1,5 +1,7 @@
 # kubernetes
 
+- [Kubernetes in 5 mins](https://youtu.be/PH-2FfFD2PU)
+
 ## Running first Hello World application 
 ```
 $ minikube status 
