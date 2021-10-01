@@ -1,6 +1,7 @@
 # kubernetes
 
 - [Kubernetes in 5 mins](https://youtu.be/PH-2FfFD2PU)
+- [Kubernetes vs. Docker: It's Not an Either/Or Question](https://youtu.be/2vMEQ5zs1ko)
 
 ## Running first Hello World application 
 ```
